@@ -134,6 +134,25 @@ img {
 .current {
   color: var(--accent-color);
 }
+.line-current::after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  top: 76px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+.line-current-portfolio::after {
+  content: '';
+  position: absolute;
+  width: 78px;
+  height: 4px;
+  top: 76px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
 
 /* стили e-mail_telephone в header*/
 
@@ -202,7 +221,7 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
+/* оформление кнопки hero */
 .button-hero {
   border: none;
   padding: 10px 32px;
@@ -225,6 +244,44 @@ img {
 .button-hero-set {
   text-align: center;
 }
+/*задний фон модального окна в hero */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1024px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.backdrop.is-hidden {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* oформление модального окна в hero */
+.modal {
+  /* display: flex; */
+  position: absolute;
+  height: 581px;
+  width: 528px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.icon-cross-elipse {
+  display: flex;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* доп/настройки секции ПРЕИМУЩЕСТВА */
 .container-discription {
@@ -237,6 +294,7 @@ img {
 .container-discription .item {
   /* display: flex; */
   width: 270px;
+  margin-right: 0;
 }
 
 .container-discription .item:not(:last-child) {
@@ -273,6 +331,28 @@ img {
   line-height: 1.71;
 }
 
+/* стили ярлыков на картинках ПРЕИМУЩЕСТВА */
+.our-work-thumb {
+  position: relative;
+}
+
+.our-work-thumb > .our-work-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.our-work-label-title {
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 /* стили заголовков секции 3,4,5 */
 .title-our-work,
 .title-team,
@@ -367,6 +447,7 @@ img {
 .social-icons:not(:last-child) {
   margin-right: 10px;
 }
+
 .icon-elipse {
   display: flex;
   border: none;
